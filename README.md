@@ -12,8 +12,8 @@ Make sure you have the following installed on your server:
 
 1. **Clone this repository** to your server:
    ```bash
-   git clone https://github.com/chokri/kc-compose.git
-   cd kc-compose
+   git clone https://github.com/chokri/keycloak-compose.git
+   cd keycloak-compose
    ```
 
 2. **Start the services**:
