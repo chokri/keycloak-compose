@@ -42,4 +42,3 @@ Make sure you have the following installed on your server:
 - The `KC_DB_PASSWORD`, `KEYCLOAK_ADMIN_PASSWORD`, and other sensitive values should be updated for production use.
 - The current setup uses self-signed certificates for HTTPS. Replace them with valid certificates for production.
 
-Feel free to customize the setup as needed.
