@@ -1,0 +1,7 @@
+**/*.md
+**/*.log
+**/node_modules
+**/secrets
+**/*.pem
+**/Dockerfile
+**/.git
