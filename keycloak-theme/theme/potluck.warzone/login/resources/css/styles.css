@@ -1324,7 +1324,7 @@ select{
 
 .text-brand-500{
   --tw-text-opacity: 1;
-  color: rgb(168 85 247 / var(--tw-text-opacity));
+  color: rgb(255 153 0 / var(--tw-text-opacity));
 }
 
 .text-brand-600{
@@ -1508,7 +1508,7 @@ select{
 
 .ring-brand-500{
   --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(168 85 247 / var(--tw-ring-opacity));
+  --tw-ring-color: rgb(255 153 0 / var(--tw-ring-opacity));
 }
 
 .ring-brand-600{
@@ -1677,7 +1677,7 @@ textarea:-webkit-autofill:active {
 
 .hover\:bg-brand-500:hover{
   --tw-bg-opacity: 1;
-  background-color: rgb(168 85 247 / var(--tw-bg-opacity));
+  background-color: rgb(255 153 0 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-gray-50:hover{
@@ -1748,7 +1748,7 @@ textarea:-webkit-autofill:active {
 
 .focus\:ring-brand-500:focus{
   --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(168 85 247 / var(--tw-ring-opacity));
+  --tw-ring-color: rgb(255 153 0 / var(--tw-ring-opacity));
 }
 
 .focus\:ring-offset-2:focus{
