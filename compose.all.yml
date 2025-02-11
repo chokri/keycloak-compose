@@ -1,11 +1,10 @@
-# 
-# version: '3.8' 
+version: '3.8'
 # This is a draft. Don't use this on production!
-#
 
 services:
   keycloak:
     image: quay.io/keycloak/keycloak:26.1.0
+    command: start-dev
     environment:
       - KC_DB=postgres
       - KC_DB_URL=jdbc:postgresql://postgres:5432/${POSTGRES_DB}
@@ -14,32 +13,20 @@ services:
       - KC_HOSTNAME=${KEYCLOAK_HOSTNAME}
       - KEYCLOAK_ADMIN=${KEYCLOAK_ADMIN_USER}
       - KEYCLOAK_ADMIN_PASSWORD=${KEYCLOAK_ADMIN_PASSWORD}
-      - KC_METRICS_ENABLED="true"
-      - KC_LOG_LEVEL=debug
+      - KC_METRICS_ENABLED=true
+      - KC_LOG_LEVEL=info
+    volumes:
+      - ./keycloak-theme/target/potluck-warzone-1.0.0.jar:/opt/keycloak/providers/potluck-warzone-1.0.0.jar
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
     healthcheck:
       test: ["CMD", "/opt/keycloak/bin/kc.sh", "status"]
       interval: 15s
       timeout: 2s
       retries: 15
       start_period: 30s
-    configs:
-      - source: infinispan_config
-        target: /opt/keycloak/conf/infinispan.xml
-    deploy:
-      replicas: 3
-      update_config:
-        parallelism: 1
-        order: start-first
-      resources:
-        limits:
-          memory: 2G
-      restart_policy:
-        condition: on-failure
-        delay: 5s
-        max_attempts: 3
-      placement:
-        constraints:
-          - node.role == manager
 
   postgres:
     image: postgres:15
@@ -49,20 +36,6 @@ services:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     volumes:
       - postgres_data:/var/lib/postgresql/data
-    deploy:
-      replicas: 1
-      placement:
-        constraints:
-          - node.role == manager 
-
-configs:
-  infinispan_config:
-    file: ./infinispan.xml
 
 volumes:
   postgres_data:
-
-networks:
-  default:
-    driver: overlay
-    attachable: true
