@@ -1,6 +1,6 @@
-# Potluck Warzone Keycloak Theme
+# OCTAVE OIDC Theme
 
-Author: **Eko Sutrisno** [Github](https://github.com/ekosutrisno)
+
 
 * This theme structure is based on the `keycloak.v2` theme.
 * Supported Keycloak versions: `v26+`

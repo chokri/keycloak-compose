@@ -1,6 +1,5 @@
-# Potluck Warzone Keycloak Theme
+# OCTAVE OIDC Theme 
 
-Author: **Eko Sutrisno** [Github](https://github.com/ekosutrisno)
 
 This theme focus on customize for Standard Login Theme page with full responsive:
 
@@ -19,4 +18,4 @@ Customized Page:
 
 ## Build Theme into JAR File
 
-Copy `potluck.warzone` folder into `theme` folder and then run `mvn clean package`
+Copy `octave` folder into `theme` folder and then run `mvn clean package`

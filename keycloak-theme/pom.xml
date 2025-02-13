@@ -3,8 +3,8 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.potluck.warzone</groupId>
-    <artifactId>potluck-warzone</artifactId>
+    <groupId>com.octave.oidctheme</groupId>
+    <artifactId>octave</artifactId>
     <version>1.0.0</version>
 
     <build>
@@ -28,12 +28,12 @@
                         <index>true</index>
 
                         <manifestEntries>
-                            <Author>Eko Sutrisno</Author>
-                            <GitHub>https://github.com/ekosutrisno/keycloak-theme</GitHub>
+                            <Author>OCTAVE</Author>
+                            <GitHub>https://github.com/octavetn/oidc-theme</GitHub>
                             <Version>${project.version}</Version>
                             <Build-Time>${maven.build.timestamp}</Build-Time>
-                            <Company>Kelas Pondok</Company>
-                            <Website>https://kelaspondok.com</Website>
+                            <Company>OCTAVE</Company>
+                            <Website>https://octave.company</Website>
                             <Description>Modern Keycloak login theme build with TailwindCSS</Description>
                             <License>MIT</License>
                             <Java-Version>${java.version}</Java-Version>

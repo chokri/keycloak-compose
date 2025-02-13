@@ -16,7 +16,7 @@ services:
       - KC_METRICS_ENABLED=true
       - KC_LOG_LEVEL=info
     volumes:
-      - ./keycloak-theme/target/potluck-warzone-1.0.0.jar:/opt/keycloak/providers/potluck-warzone-1.0.0.jar
+      - ./keycloak-theme/target/octave-1.0.0.jar:/opt/keycloak/providers/octave-1.0.0.jar
     ports:
       - "8080:8080"
     depends_on:
