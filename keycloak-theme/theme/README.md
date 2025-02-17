@@ -1,5 +1,4 @@
-# OCTAVE OIDC Theme 
-
+# OCTAVE OIDC Theme
 
 This theme focus on customize for Standard Login Theme page with full responsive:
 
