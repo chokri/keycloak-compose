@@ -12,7 +12,7 @@
           <input class="px-4 py-2.5 bg-white text-gray-800 rounded-lg outline-none border-brand-300 border-dashed ring-1 ring-offset-2 ring-brand-500 w-full focus:outline-none focus:border-brand-300 focus:border-dashed focus:ring-1 focus:ring-offset-2 focus:ring-brand-500" id="kc-attempted-username" value="${auth.attemptedUsername}" readonly>
       </div>
       <div class="ml-4">
-        <button id="reset-login" class="py-2.5 px-4 rounded-lg border-2 border-brand-400 text-center text-brand-600 w-max" type="button" 
+        <button id="reset-login" class="py-2.5 px-4 rounded-lg border-2 border-brand-400 text-center text-brand-600 w-max" type="button"
               aria-label="${msg('restartLoginTooltip')}" onclick="location.href='${url.loginRestartFlowUrl}'">
             <i class="fa-sync-alt fas" aria-hidden="true"></i>
             <span class="kc-tooltip-text">${msg("restartLoginTooltip")}</span>
@@ -30,7 +30,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="robots" content="noindex, nofollow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <#if properties.meta?has_content>
         <#list properties.meta?split(' ') as meta>
             <meta name="${meta?split('==')[0]}" content="${meta?split('==')[1]}"/>
@@ -79,7 +79,7 @@
         <p class="text-brand-800 text-2xl">${kcSanitize(msg("loginTitleHtml",(realm.displayNameHtml!'')))?no_esc}</p>
       </header>
       <div class="text-slate-700">
-        <h1 class="text-2xl font-medium">Auth</h1>
+        <h1 class="text-2xl font-medium">Login</h1>
         <h2 class="text-brand-500" id="kc-page-title-custom"><#nested "header"></h1>
         <#if realm.internationalizationEnabled  && locale.supported?size gt 1>
             <div class="w-full flex justify-end mt-4">
@@ -134,7 +134,7 @@
         <#if displayMessage && message?has_content && (message.type != 'warning' || !isAppInitiatedAction??)>
             <@loginAlert.alert message=message />
         </#if>
-        
+
         <div class="my-5"><#nested "form"></div>
 
         <#if auth?has_content && auth.showTryAnotherWayLink()>
